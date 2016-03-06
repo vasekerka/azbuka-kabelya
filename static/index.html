@@ -4,20 +4,28 @@
     <meta charset="UTF-8">
     <title>Азбука кабеля</title>
     <link href="style.css" rel="stylesheet">
+    <script src="//code.jquery.com/jquery-2.2.1.min.js"></script>
+    <script src="owlcarousel/owl.carousel.min.js"></script>
+    <link href="owlcarousel/owl.carousel.css" rel="stylesheet">
+    <link href="owlcarousel/owl.carousel.theme.css" rel="stylesheet">
 </head>
 <body>
     <header>
-        <div class="logo">
-            <a href="/">logo</a>
+        <a class="logo" href="/"></a>
+        <div class="header__call">
+            <div class="vcard">
+                <div class="tel">
+                    <abbr class="value">+7 (3452) 60-10-30</abbr>
+                </div>
+            </div>
+            <button>Оставить заявку</button>
         </div>
-        <div class="contact">contact</div>
-        <button>Оставить заявку</button>
     </header>
     <main>
         <ul class="slider">
-           <li>слайд 1</li>
-           <li>слайд 2</li>
-           <li>слайд 3</li>
+           <li class="slider__elem slider__elem_1">слайд 1</li>
+           <li class="slider__elem slider__elem_2">слайд 2</li>
+           <li class="slider__elem slider__elem_3">слайд 3</li>
         </ul>
         <div class="about">
             <h3>О нас</h3>
@@ -25,6 +33,7 @@
             <button>Скачать прайс</button>
             <button>Получить прайс</button>
         </div>
+        <h3>Наши преимущества:</h3>
         <div>
             <ul class="features">
                 <li class="pic1"></li>
@@ -37,13 +46,18 @@
             <button>Оформить заказ</button>
         </div>
         <div>
-            <h3>Форма обратной связи</h3>
-            <form>
-                <label>Имя <input></label>
-                <label>Номер телефона <input type="tel"></label>
-                <label>e-mail <input type="email"></label>
-                <label>Ваше сообщение <textarea></textarea></label>
-                <input type="submit" value="Отправить">
+            <h3>Остались вопросы? Задайте их нашему менеждеру:</h3>
+            <form class="question">
+                <div>
+                    <input type="text" placeholder="Имя">
+                    <input type="tel" placeholder="Телефон">
+                    <input type="email" placeholder="E-mail">
+                    <!--Вставить иконки для телефона имени и почты-->
+                </div>
+                <div>
+                    <textarea placeholder="Сообщение"></textarea>
+                    <button>Отправить</button>
+                </div>
             </form>
             <h3>Заказать обратный звонок</h3>
             <form>
@@ -53,12 +67,48 @@
         </div>
     </main>
     <footer>
-        <div class="contact">contact</div>
+        <div class="vcard">
+            <div>
+                <a class="fn org url" href="http://www.azbukakabelya.ru">Азбука кабеля</a>
+            </div>
+            <div class="adr">
+                <span class="postal-code">625023</span>,
+                <span class="country-name">Россия</span>,
+                <span class="region">Тюменская область</span>,
+                <span class="locality">г. Тюмень</span>,
+                <span class="street-address">ул.Харьковская, д.87, стр.2</span>,
+                <div class="tel">Телефон:
+                    <abbr class="value">+7 (3452) 60-10-30</abbr>
+                </div>
+                <div>e-mail:
+                    <a class="email" href="mailto:dudarev-tt@mail.ru">dudarev-tt@mail.ru</a>
+                 </div>
+                <div>
+                    Мы работаем <span class="workhours">ежедневно с 09:00 до 18:00</span>
+                </div>
+            </div>
+        </div>
         <div class="social">
             <a href="https://vk.com">vk.com</a>
             <a href="https://instagram.com">instagram.com</a>
             <a href="https://facebook.com">facebook.com</a>
         </div>
+        <div>
+            <script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=O0zjYCMZ2hz7RgCbTfp1k53WKLL_7n1Y&width=100%&height=342&lang=ru_RU&sourceType=constructor"></script>
+        </div>
     </footer>
+<script>
+    $(document).ready(function(){
+        $(".slider").owlCarousel({
+            nav: true,
+            autoplay: true,
+            autoplayTimeout: 3000,
+            items: 1,
+            loop: true,
+            center: true,
+            navText: []
+        });
+    });
+</script>
 </body>
 </html>
