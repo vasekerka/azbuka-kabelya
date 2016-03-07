@@ -8,6 +8,7 @@
     <script src="owlcarousel/owl.carousel.min.js"></script>
     <link href="owlcarousel/owl.carousel.css" rel="stylesheet">
     <link href="owlcarousel/owl.carousel.theme.css" rel="stylesheet">
+    <link href="modal.css" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -18,8 +19,14 @@
                     <abbr class="value">+7 (3452) 60-10-30</abbr>
                 </div>
             </div>
-            <button>Оставить заявку</button>
+            <button>Заказать звонок</button>
         </div>
+        <nav class="menu">
+            <a href="#about">О нас</a>
+            <a href="#price">Скачать прайс</a>
+            <a href="#ask">Задать вопрос</a>
+            <a href="#contact">Контакты</a>
+        </nav>
     </header>
     <main>
         <ul class="slider">
@@ -28,10 +35,22 @@
            <li class="slider__elem slider__elem_3">слайд 3</li>
         </ul>
         <div class="about">
+            <a name="about"></a>
             <h3>О нас</h3>
-            <p>Компания...</p>
-            <button>Скачать прайс</button>
-            <button>Получить прайс</button>
+            <p>
+                Компания «РПК»  предлагает Вам свои услуги  в области  поставок кабельно-проводниковой  продукции со склада в г.Тюмень (ул.Харьковская , д.87, стр.2 ), а также  под заказ.
+                ООО «РПК» является представителем: ОАО «Камкабель», ОАО «Электрокабель» Кольчугинский завод, ООО «Рыбинсккабель»,  ООО «Кирскабель», ЗАО «Металлист»,  ОАО «Промстройкабель».
+                Многолетний опыт  работы на рынке  кабельно-проводниковой продукции позволил ООО «РПК»  зарекомендовать  себя  надежным партнером  по поставке кабеля. Отлаженная система сотрудничества с крупнейшими производителями  кабельно-проводниковой продукции позволяет выполнять любые поставки кабеля.
+            </p>
+            <a name="price"></a>
+            <div class="columns load">
+                <div>
+                    <button>Скачать прайс</button>
+                </div>
+                <div>
+                    <button>Получить прайс</button>
+                </div>
+            </div>
         </div>
         <h3>Наши преимущества:</h3>
         <div>
@@ -43,16 +62,32 @@
                 <li class="pic5"></li>
                 <li class="pic6"></li>
             </ul>
-            <button>Оформить заказ</button>
+            <div class="columns load">
+                <div>
+                </div>
+                <div>
+                    <button>Оформить заказ</button>
+                </div>
+            </div>
+
         </div>
         <div>
+            <a name="ask"></a>
             <h3>Остались вопросы? Задайте их нашему менеждеру:</h3>
-            <form class="question">
+            <form class="question columns">
                 <div>
-                    <input type="text" placeholder="Имя">
-                    <input type="tel" placeholder="Телефон">
-                    <input type="email" placeholder="E-mail">
-                    <!--Вставить иконки для телефона имени и почты-->
+                    <div class="form__row">
+                        <span class="glyphicon glyphicon-user"></span>
+                        <input type="text" placeholder="Имя">
+                    </div>
+                    <div class="form__row">
+                        <span class="glyphicon glyphicon-earphone"></span>
+                        <input type="tel" placeholder="Телефон">
+                    </div>
+                    <div class="form__row">
+                        <span class="glyphicon glyphicon-envelope"></span>
+                        <input type="email" placeholder="E-mail">
+                    </div>
                 </div>
                 <div>
                     <textarea placeholder="Сообщение"></textarea>
@@ -64,23 +99,41 @@
                 <label>Номер телефона <input type="tel"></label>
                 <input type="submit" value="Заказать звонок">
             </form>
+            <div id="modal" class="modal">
+                <div>
+                    <div class="text" align="center">
+                        <div id="blok_tel">
+                            <form action="" method="post" class="form1">
+                                ЗАКАЗ ОБРАТНОГО ЗВОНКА
+                                <input type="text" name="tel" class="inputbox" value="Номер телефона с кодом"
+                                       onfocus="(this.value == '0123456789') && (this.value = '')"
+                                       onblur="(this.value == '') && (this.value = '0123456789')">
+                                <input type="submit" class="button" name="submit_tel">
+                            </form>
+                        </div>
+                    </div>
+                    <a href="#close" title="Закрыть">Закрыть</a>
+                </div>
+            </div>
         </div>
     </main>
     <footer>
         <div class="vcard">
+            <a name="contact"></a>
+            <h3>Контакты</h3>
             <div>
                 <a class="fn org url" href="http://www.azbukakabelya.ru">Азбука кабеля</a>
             </div>
             <div class="adr">
                 <span class="postal-code">625023</span>,
-                <span class="country-name">Россия</span>,
-                <span class="region">Тюменская область</span>,
+                <span class="country-name hidden">Россия</span>
+                <span class="region hidden">Тюменская область</span>
                 <span class="locality">г. Тюмень</span>,
-                <span class="street-address">ул.Харьковская, д.87, стр.2</span>,
+                <span class="street-address">ул.Харьковская, д.87, стр.2</span>
                 <div class="tel">Телефон:
                     <abbr class="value">+7 (3452) 60-10-30</abbr>
                 </div>
-                <div>e-mail:
+                <div>E-mail:
                     <a class="email" href="mailto:dudarev-tt@mail.ru">dudarev-tt@mail.ru</a>
                  </div>
                 <div>
@@ -88,10 +141,16 @@
                 </div>
             </div>
         </div>
-        <div class="social">
-            <a href="https://vk.com">vk.com</a>
-            <a href="https://instagram.com">instagram.com</a>
-            <a href="https://facebook.com">facebook.com</a>
+        <div class="clearfix">
+            <div class="social">
+                <h3>Оставайтесь с нами</h3>
+                <ul class="social_icons">
+                    <li><a href="https://www.facebook.com" target="_blank"><img src="icons/Face_ico.png" width="24" height="24"></a></li>
+                    <li><a href="https://twitter.com" target="_blank"><img src="icons/twitt_ico.png" width="24" height="24"></a></li>
+                    <li><a href="http://vk.com" target="_blank"><img src="icons/vk_ico.png" width="24" height="24"></a></li>
+                    <li><a href="http://instagram.com" target="_blank"><img src="icons/inst_ico.png" width="24" height="24"></a></li>
+                </ul>
+            </div>
         </div>
         <div>
             <script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=O0zjYCMZ2hz7RgCbTfp1k53WKLL_7n1Y&width=100%&height=342&lang=ru_RU&sourceType=constructor"></script>
@@ -108,7 +167,9 @@
             center: true,
             navText: []
         });
+
     });
+
 </script>
 </body>
 </html>

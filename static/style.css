@@ -1,5 +1,6 @@
 html {
     font-family: Tahoma;
+    font-size: 16px;
 }
 
 html,body {
@@ -13,7 +14,20 @@ html,body {
     display: inline-block;
     z-index: 1;
     position: relative;
+    float: left;
 }
+
+.menu {
+    text-align: center;
+}
+
+.menu a {
+    display: inline-block;
+    padding: 30px 30px;
+    color: red;
+    text-decoration: none;
+}
+
 .slider {
     height: 300px;
     padding-left: 0;
@@ -99,7 +113,12 @@ input {
 .question input[type="email"] {
     width: 80%;
     box-sizing: border-box;
+    margin-left: 30px;
+}
+
+.form__row {
     margin: 20px 0;
+    position: relative;
 }
 
 textarea {
@@ -114,20 +133,86 @@ textarea {
 
 }
 
-.question {
+.columns {
     display: flex;
     max-width: 960px;
     margin: 0 auto;
 }
 
-.question > div {
+.columns > div {
     flex: 1 50%;
 }
 
-.question > div:first-of-type {
-    padding-left: 100px;
+.load > div {
+    text-align: center;
 }
 
 .question button {
     float: right;
+    margin: 0 40px;
+}
+
+@font-face {
+    font-family: 'Glyphicons Halflings';
+
+    src: url('fonts/glyphicons-halflings-regular.eot');
+    src: url('fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('fonts/glyphicons-halflings-regular.woff') format('woff'), url('fonts/glyphicons-halflings-regular.ttf') format('truetype');
+}
+
+.glyphicon {
+    position: absolute;
+    top: 10px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2em;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+}
+
+.glyphicon-earphone:before {
+    content: "\e182";
+}
+
+.glyphicon-user:before {
+    content: "\e008";
+}
+
+.glyphicon-envelope:before {
+    content: "\2709";
+}
+
+.social {
+    float:right;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.social_icons {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.social_icons li {
+    display: inline-block;
+    margin: 0 5px 0 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+.adr {
+    float: left;
+}
+
+.fn.org.url {
+    color: #E01B27;
+    text-decoration: none;
+    font-weight: 700;
 }
