@@ -19,12 +19,12 @@
                     <abbr class="value">+7 (3452) 60-10-30</abbr>
                 </div>
             </div>
-            <button>Заказать звонок</button>
+            <a href="#modal" class="button openModal">Заказать обратный звонок</a>
         </div>
         <nav class="menu">
             <a href="#about">О нас</a>
             <a href="#price">Скачать прайс</a>
-            <a href="#ask">Задать вопрос</a>
+            <a href="#ask">Связаться с нами</a>
             <a href="#contact">Контакты</a>
         </nav>
     </header>
@@ -41,18 +41,22 @@
                 Компания «РПК»  предлагает Вам свои услуги  в области  поставок кабельно-проводниковой  продукции со склада в г.Тюмень (ул.Харьковская , д.87, стр.2 ), а также  под заказ.
                 ООО «РПК» является представителем: ОАО «Камкабель», ОАО «Электрокабель» Кольчугинский завод, ООО «Рыбинсккабель»,  ООО «Кирскабель», ЗАО «Металлист»,  ОАО «Промстройкабель».
                 Многолетний опыт  работы на рынке  кабельно-проводниковой продукции позволил ООО «РПК»  зарекомендовать  себя  надежным партнером  по поставке кабеля. Отлаженная система сотрудничества с крупнейшими производителями  кабельно-проводниковой продукции позволяет выполнять любые поставки кабеля.
+
+                Компания «РПК»  предлагает Вам свои услуги  в области  поставок кабельно-проводниковой  продукции со склада в г.Тюмень (ул.Харьковская , д.87, стр.2 ), а также  под заказ.
+                ООО «РПК» является представителем: ОАО «Камкабель», ОАО «Электрокабель» Кольчугинский завод, ООО «Рыбинсккабель»,  ООО «Кирскабель», ЗАО «Металлист»,  ОАО «Промстройкабель».
+                Многолетний опыт  работы на рынке  кабельно-проводниковой продукции
             </p>
             <a name="price"></a>
             <div class="columns load">
                 <div>
-                    <button>Скачать прайс</button>
+                    <button class="button">Скачать прайс</button>
                 </div>
                 <div>
-                    <button>Получить прайс</button>
+                    <button class="button">Получить прайс по почте</button>
                 </div>
             </div>
         </div>
-        <h3>Наши преимущества:</h3>
+        <h3>Наши преимущества</h3>
         <div>
             <ul class="features">
                 <li class="pic1"></li>
@@ -66,14 +70,33 @@
                 <div>
                 </div>
                 <div>
-                    <button>Оформить заказ</button>
+                    <button class="button">Оформить заказ</button>
                 </div>
             </div>
-
+        </div>
+        <h3>С нами сотрудничают</h3>
+        <div>
+            <ul class="cooperation">
+                <li class="pic1"></li>
+                <li class="pic2"></li>
+                <li class="pic3"></li>
+                <li class="pic4"></li>
+                <li class="pic5"></li>
+                <li class="pic6"></li>
+            </ul>
+            <div class="columns load">
+                <div>
+                </div>
+                <div>
+                    <button class="button">Оформить заказ</button>
+                </div>
+            </div>
         </div>
         <div>
             <a name="ask"></a>
-            <h3>Остались вопросы? Задайте их нашему менеждеру:</h3>
+            <h3>Форма обратной связи</h3>
+            Вы можете отправить нам сообщение при помощи данной формы.
+            Поля, помеченные *, обязательны к заполнению.
             <form class="question columns">
                 <div>
                     <div class="form__row">
@@ -91,24 +114,19 @@
                 </div>
                 <div>
                     <textarea placeholder="Сообщение"></textarea>
-                    <button>Отправить</button>
+                    <button class="button">Отправить</button>
                 </div>
-            </form>
-            <h3>Заказать обратный звонок</h3>
-            <form>
-                <label>Номер телефона <input type="tel"></label>
-                <input type="submit" value="Заказать звонок">
             </form>
             <div id="modal" class="modal">
                 <div>
                     <div class="text" align="center">
                         <div id="blok_tel">
                             <form action="" method="post" class="form1">
-                                ЗАКАЗ ОБРАТНОГО ЗВОНКА
-                                <input type="text" name="tel" class="inputbox" value="Номер телефона с кодом"
+                                Оставьте номер телефона, и наш менеджер свяжется с Вами в ближайшее время
+                                <input type="tel" name="tel" class="inputbox" placeholder="Введите номер телефона"
                                        onfocus="(this.value == '0123456789') && (this.value = '')"
                                        onblur="(this.value == '') && (this.value = '0123456789')">
-                                <input type="submit" class="button" name="submit_tel">
+                                <input type="submit" value="Заказать звонок" class="button" name="submit_tel">
                             </form>
                         </div>
                     </div>
@@ -145,10 +163,10 @@
             <div class="social">
                 <h3>Оставайтесь с нами</h3>
                 <ul class="social_icons">
-                    <li><a href="https://www.facebook.com" target="_blank"><img src="icons/Face_ico.png" width="24" height="24"></a></li>
-                    <li><a href="https://twitter.com" target="_blank"><img src="icons/twitt_ico.png" width="24" height="24"></a></li>
-                    <li><a href="http://vk.com" target="_blank"><img src="icons/vk_ico.png" width="24" height="24"></a></li>
-                    <li><a href="http://instagram.com" target="_blank"><img src="icons/inst_ico.png" width="24" height="24"></a></li>
+                    <li><a href="https://www.facebook.com" target="_blank"><img src="icons/Face_ico.png" width="25" height="25"></a></li>
+                    <li><a href="https://twitter.com" target="_blank"><img src="icons/twitt_ico.png" width="25" height="25"></a></li>
+                    <li><a href="http://vk.com" target="_blank"><img src="icons/vk_ico.png" width="25" height="25"></a></li>
+                    <li><a href="http://instagram.com" target="_blank"><img src="icons/inst_ico.png" width="25" height="25"></a></li>
                 </ul>
             </div>
         </div>

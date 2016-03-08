@@ -29,7 +29,7 @@ html,body {
 }
 
 .slider {
-    height: 300px;
+    height: 500px;
     padding-left: 0;
     list-style-type: none;
     margin: 0;
@@ -37,16 +37,16 @@ html,body {
 
 .slider__elem {
     position: relative;
-    height: 300px;
+    height: 500px;
     background-position: center center;
     background-size: cover;
 }
 
 .slider__elem_1 {
-     background-image: url(img/slider1.jpeg);
+     background-image: url(img/slider1.jpg);
  }
 .slider__elem_2 {
-    background-image: url(img/slider2.jpg);
+    background-image: url(img/slider2.jpeg);
 }
 .slider__elem_3 {
     background-image: url(img/slider3.jpg);
@@ -81,7 +81,7 @@ header .vcard {
     font-weight: 700;
 }
 
-button {
+.button {
     color: #0f8fe1;
     text-decoration: none;
     text-transform: uppercase;
@@ -95,7 +95,7 @@ button {
     cursor: pointer;
 }
 
-header button {
+header .button {
     transform: scale(0.9);
 }
 
@@ -215,4 +215,9 @@ textarea {
     color: #E01B27;
     text-decoration: none;
     font-weight: 700;
+}
+
+.modal input[type="tel"] {
+    margin: 15px auto;
+    width: 50%;
 }
